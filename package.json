@@ -1,0 +1,23 @@
+{
+  "name": "atis",
+  "version": "0.0.1",
+  "description": "LKBE ATIS generator",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pocitas/atis.git"
+  },
+  "author": "Martin Hybner",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/pocitas/atis/issues"
+  },
+  "homepage": "https://github.com/pocitas/atis#readme",
+  "dependencies": {
+    "@popperjs/core": "^2.9.1",
+    "bootstrap": "^5.0.0-beta3"
+  }
+}
