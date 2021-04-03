@@ -2,3 +2,16 @@ img#logo {
   margin-bottom: 20px;
   margin-right: 10px;
 }
+
+ul#mainMenu button {
+  color:#fff;
+}
+
+ul#mainMenu button {
+  width: 100%;
+  text-align: left;
+}
+
+div#mainContainer {
+  margin: 1rem;
+}

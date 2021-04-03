@@ -18,12 +18,18 @@
     <div class="d-flex flex-column p-3 text-white bg-dark" style="width: 280px;">
       <span class="fs-4"><img id="logo" src="img/cloud-sun.svg" width="32" height="32">ATIS</span>
       <hr>
-      <ul class="nav nav-pills flex-column mb-auto">
-        <li class="nav-item">
-          <a href="#" class="nav-link active">
-            <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
-            Home
-          </a>
+      <ul id="mainMenu" class="nav nav-pills flex-column mb-auto" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button id="generatorTab" data-bs-target="#generator" class="nav-link active" data-bs-toggle="tab" type="button" role="tab">
+          <img src="img/speech.svg" width="32" height="32">
+            Generátor zprávy
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button id="recordTab" data-bs-target="#record" class="nav-link" data-bs-toggle="tab" type="button" role="tab">
+          <img src="img/pencil.svg" width="32" height="32">
+            Záznam služby
+          </button>
         </li>
         <!--
         <li>
@@ -51,8 +57,13 @@
     </div>
     <div class="b-example-divider"></div>
 
-    <div class="d-flex flex-column">
-      text
+    <div id="mainContainer" class="tab-content d-flex flex-column">
+      <div id="generator" class="tab-pane fade show active" role="tabpanel">
+        text 00000001
+      </div>
+      <div id="record" class="tab-pane fade" role="tabpanel">
+        text 00000010
+      </div>
     </div>
 
     <script src="node_modules/@popperjs/core/dist/umd/popper.js"></script>
