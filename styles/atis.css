@@ -4,12 +4,13 @@ img#logo {
 }
 
 ul#mainMenu button {
+  width: 100%;
+  text-align: left;
   color:#fff;
 }
 
-ul#mainMenu button {
-  width: 100%;
-  text-align: left;
+ul#mainMenu button img {
+  margin-right: 10px;
 }
 
 div#mainContainer {
