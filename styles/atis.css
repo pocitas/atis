@@ -16,3 +16,41 @@ ul#mainMenu button img {
 div#mainContainer {
   margin: 1rem;
 }
+
+form.messageGenerator {
+  line-height: 3;
+}
+
+form.messageGenerator div.form-group {
+  margin-left: 3em;
+}
+
+form.messageGenerator div.optional {
+  margin-left: 2em;
+}
+
+form.messageGenerator div.optional fieldset {
+  display: inline;
+}
+
+form.messageGenerator div.optional .disabled {
+  color: #aaa;
+}
+
+form.messageGenerator div.optional div {
+  display: inline;
+  padding-left: 0;
+}
+
+form.messageGenerator div.optional input.form-check-input {
+  float: none;
+  margin-top: 0;
+  margin-left: -2.25em;
+  vertical-align: baseline;
+}
+
+form.messageGenerator select
+ {
+  display: inline;
+  width: auto;
+}

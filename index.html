@@ -53,7 +53,59 @@
     <div id="mainContainer" class="tab-content d-flex flex-column">
       <div id="generator" class="tab-pane fade show active" role="tabpanel">
         <!-- Message generator tab-->
-        
+        <form class="messageGenerator">
+          <div class="form-group">
+            Bene Radio traffic information
+            <input type="text" id="releaseTimeTextbox" class="form-control" style="width:4rem; display:inline;" placeholder="0000" maxlength="4">.
+          </div>
+
+          <div class="form-group">
+            <label for="rwySelect">Runway in use</label>
+            <select class="form-control" id="rwySelect">
+              <option>06</option>
+              <option>09</option>
+              <option>24</option>
+              <option>27</option>
+            </select>
+            <select class="form-control" id="patternSelect">
+              <option>left-hand</option>
+              <option>right-hand</option>
+            </select>
+            <label for="patternSelect">pattern.</label>
+          </div>
+
+          <div class="form-group optional">
+            <div class="form-check">
+              <input checked onClick="toggleDisabled('rwyTakeoffBlock', this)" class="form-check-input" type="checkbox" value="" id="takeoffCheckbox">
+            </div>
+            <div id="rwyTakeoffBlock" class="optional">
+              <label for="rwyTakeoffSelect">For the first takeoff runway</label>
+              <select class="form-control" id="rwyTakeoffSelect">
+                <option>27L</option>
+                <option>27R</option>
+              </select>.
+            </div>
+          </div>
+          <div class="form-group optional">
+            <div class="form-check">
+              <input checked onClick="toggleDisabled('rwyGlidersBlock', this)" class="form-check-input" type="checkbox" value="" id="glidersCheckbox">
+            </div>
+            <div id="rwyGlidersBlock" class="optional">
+              <label for="rwySelect">For the gliders runway</label>
+              <select class="form-control" id="rwyGlidersSelect">
+                <option>09L</option>
+                <option>27R</option>
+                <option>06</option>
+                <option>24</option>
+              </select>
+              <select class="form-control" id="patternGlidersSelect">
+                <option>left-hand</option>
+                <option>right-hand</option>
+              </select>
+              <label for="patternSelect">pattern.</label>
+            </div>
+          </div>
+        </div>
       </div>
       <div id="record" class="tab-pane fade" role="tabpanel">
         text 00000010
@@ -62,5 +114,6 @@
 
     <script src="node_modules/@popperjs/core/dist/umd/popper.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/atis.js"></script>
   </body>
 </html>
