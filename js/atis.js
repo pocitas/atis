@@ -1,3 +1,4 @@
+// disable optional message blocks
 function toggleDisabled(elementId, checkboxElement) {
   let el = document.getElementById(elementId);
   let formElements = el.querySelectorAll("input, select");
@@ -15,3 +16,16 @@ function toggleDisabled(elementId, checkboxElement) {
     });
   }
 }
+
+// ATIS application object
+var a = {
+  version: "0.0.1"
+}
+
+// Vue object
+var v = new Vue({
+  el: '#mainContainer',
+  data: {
+    a
+  }
+})

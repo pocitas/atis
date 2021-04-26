@@ -8,10 +8,11 @@
     <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <link href="styles/sidebar.css" rel="stylesheet">
     <link href="styles/atis.css" rel="stylesheet">
-
+<!--
     <link rel="icon" href="img/favicon.ico">
     <link rel="icon" href="img/favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="img/favicon-16x16.png" sizes="16x16" type="image/png">
+  -->
     <title>LKBE ATIS generator</title>
   </head>
   <body>
@@ -51,7 +52,8 @@
     <div class="b-example-divider"></div>
 
     <div id="mainContainer" class="tab-content d-flex flex-column">
-      <div id="generator" class="tab-pane fade show active" role="tabpanel">
+      <span class="version">Verze: {{ a.version }}</span>
+      <div id="generator" class="tab-pane fade show active" role="tabpanel">    
         <!-- Message generator tab-->
         <form class="messageGenerator">
           <div class="form-group">
@@ -114,6 +116,7 @@
 
     <script src="node_modules/@popperjs/core/dist/umd/popper.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/vue.js"></script>
     <script src="js/atis.js"></script>
   </body>
 </html>

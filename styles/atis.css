@@ -54,3 +54,7 @@ form.messageGenerator select
   display: inline;
   width: auto;
 }
+
+span.version {
+  font-size: x-small;
+}
