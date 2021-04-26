@@ -19,7 +19,13 @@ function toggleDisabled(elementId, checkboxElement) {
 
 // ATIS application object
 var a = {
-  version: "0.0.1"
+  version: "0.0.1",
+  messageString: "",
+  generateMessage: function(){
+    
+    this.messageString = "Bene Radio traffic information " + document.getElementById("releaseTimeTextbox").value;
+    console.log(this.messageString);
+  }
 }
 
 // Vue object

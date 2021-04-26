@@ -32,6 +32,7 @@
             Záznam služby
           </button>
         </li>
+      </ul>
       <hr>
       <!--
       <div class="dropdown">
@@ -49,11 +50,12 @@
       </div>
     -->
     </div>
+
     <div class="b-example-divider"></div>
 
     <div id="mainContainer" class="tab-content d-flex flex-column">
-      <span class="version">Verze: {{ a.version }}</span>
-      <div id="generator" class="tab-pane fade show active" role="tabpanel">    
+      <div id="generator" class="tab-pane fade show active" role="tabpanel">
+        <h2>Generátor zprávy</h2>
         <!-- Message generator tab-->
         <form class="messageGenerator">
           <div class="form-group">
@@ -107,7 +109,11 @@
               <label for="patternSelect">pattern.</label>
             </div>
           </div>
-        </div>
+        </form>
+        <button id="generateMessage" onclick="a.generateMessage()" type="button" class="btn btn-primary">&#8681; Generovat zprávu &#8681;</button>
+        <form>
+          <textarea class="form-control" id="messageTextarea" rows="10"></textarea>
+        </form>
       </div>
       <div id="record" class="tab-pane fade" role="tabpanel">
         text 00000010
