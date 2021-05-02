@@ -1,9 +1,8 @@
 // TODO: Kam se mi poděl kód, automaticky načítající čas vydání?
 
-// ATIS application object
-var a = {
+// ATIS application data object
+var a = JSON.parse(localStorage.getItem("a")) || {
   version: "0.0.1",
-  messageString: "",
   takeoffCheckbox: true,
   glidersCheckbox: false,
   visibilityCheckbox: false,
@@ -17,21 +16,7 @@ var a = {
   windSpeed: "",
   visibility: "",
   messageSuffix: ""
-  /*,
-  generateMessage: function(){
-    // default values
-    let timeText = this.releaseTime || "0000";
-    let visibilityText = this.visibility || "9999";
-    this.messageString  = "Bene Radio traffic information " + timeText + ".\n";
-    this.messageString += "Runway in use " + this.rwySelect + ", " + this.patternSelect + " pattern.\n";
-    if(this.takeoffCheckbox) this.messageString += "For the first takeoff runway " + this.rwyTakeoffSelect + ".\n"
-    if(this.glidersCheckbox) this.messageString += "For the gliders runway " + this.rwyGlidersSelect + ", " + this.patternGlidersSelect + " pattern.\n";
-    this.messageString += "Wind " + this.windDirection + " degrees " + this.windSpeed + " knots.\n";
-    // TODO: rozliš dohlednost na metry nebo kilometry.
-    if(this.visibilityCheckbox) this.messageString += "Visibility " + visibilityText + " meters.\n";
-    this.messageString += this.messageSuffix;
-  }*/
-}
+};
 
 // Vue object
 var v = new Vue({
@@ -55,6 +40,8 @@ var v = new Vue({
       // TODO: rozliš dohlednost na metry nebo kilometry.
       if(a.visibilityCheckbox) messageString += "Visibility " + visibility + " meters.\n";
       messageString += a.messageSuffix;
+      // save "a" object to a localStorage
+      localStorage.setItem("a",JSON.stringify(a));
       return messageString;
     }
   }
