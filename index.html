@@ -60,7 +60,9 @@
         <form class="messageGenerator">
           <div class="form-group">
             <label for="releaseTimeTextbox">Bene Radio traffic information</label>
-            <input v-model="a.releaseTime" type="text" id="releaseTimeTextbox" class="form-control" style="width:4rem; display:inline;" placeholder="0000" maxlength="4">.
+            <input v-model="a.releaseTime"
+                   v-bind:placeholder="releaseTimePlaceholder"
+                   type="text" id="releaseTimeTextbox" class="form-control" style="width:4rem; display:inline;" maxlength="4">.
           </div>
 
           <div class="form-group">
@@ -125,7 +127,22 @@
             <input v-model="a.windDirection" type="text" id="windDirectionTextbox" class="form-control" style="width:4rem; display:inline;" placeholder="000" maxlength="3">
             <label for="windDirectionTextbox">degrees</label>
             <input v-model="a.windSpeed" type="text" id="windSpeedTextbox" class="form-control" style="width:3rem; display:inline;" placeholder="00" maxlength="2">
-            <label for="windSpeedTextbox">knots.</label>
+            <label for="windSpeedTextbox">knots,</label>
+          </div>
+
+          // TODO: indent to the right
+          <div class="form-group optional">
+            <div class="form-check">
+              <input v-model="a.windGustCheckbox" class="form-check-input" type="checkbox" id="windGustCheckbox">
+            </div>
+            <div v-bind:class="{ disabled: !a.windGustCheckbox }" id="windGustBlock" class="optional">
+              <label for="windGustTextbox">gusting </label>
+              <input v-model="a.windGust"
+                     v-bind:class="{ disabled: !a.windGustCheckbox }"
+                     :disabled="a.windGustCheckbox == 0" type="text"
+                     id="windGustTextbox" class="form-control" style="width:3rem; display:inline;" placeholder="00" maxlength="2">
+                     <label for="windGustTextbox">knots.</label>
+            </div>
           </div>
 
           <div class="form-group optional">
@@ -136,7 +153,7 @@
               <label for="visibilityTextbox">Visibility </label>
               <input v-model="a.visibility"
                      v-bind:class="{ disabled: !a.visibilityCheckbox }"
-                     :disabled="a.visibilityCheckbox == 0"type="text"
+                     :disabled="a.visibilityCheckbox == 0" type="text"
                      id="visibilityTextbox" class="form-control" style="width:4rem; display:inline;" placeholder="9999" maxlength="4"> meters.
             </div>
           </div>
