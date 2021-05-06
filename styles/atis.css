@@ -29,6 +29,10 @@ form.messageGenerator div.optional {
   margin-left: 0;
 }
 
+form.messageGenerator div.optional #windGustBlock {
+  margin-left: 14rem;
+}
+
 form.messageGenerator div.optional fieldset {
   display: inline;
 }

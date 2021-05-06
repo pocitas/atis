@@ -152,9 +152,9 @@
             <div v-bind:class="{ disabled: !a.visibilityCheckbox }" id="visibilityBlock" class="optional">
               <label for="visibilityTextbox">Visibility </label>
               <input v-model="a.visibility"
-                     v-bind:class="{ disabled: !a.visibilityCheckbox }"
+                     v-bind:class="{ disabled: !a.visibilityCheckbox, 'is-invalid': a .visibilityCheckbox && !a.visibility}"
                      :disabled="a.visibilityCheckbox == 0" type="text"
-                     id="visibilityTextbox" class="form-control" style="width:4rem; display:inline;" placeholder="9999" maxlength="4"> meters.
+                     id="visibilityTextbox" class="form-control" style="width:4rem; display:inline;" maxlength="4"> meters.
             </div>
           </div>
 
@@ -167,6 +167,7 @@
           <textarea class="form-control" id="messageTextarea" rows="10" spellcheck="false">{{ messageString }}</textarea>
         </form>
       </div>
+      <button id="ssml" type="button" class="btn btn-primary">SSML</button>
       <div id="record" class="tab-pane fade" role="tabpanel">
         text 00000010
       </div>
