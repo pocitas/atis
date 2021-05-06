@@ -22,11 +22,11 @@ form.messageGenerator {
 }
 
 form.messageGenerator div.form-group {
-  margin-left: 3em;
+  margin-left: 30px;
 }
 
 form.messageGenerator div.optional {
-  margin-left: 2em;
+  margin-left: 0;
 }
 
 form.messageGenerator div.optional fieldset {
@@ -40,13 +40,16 @@ form.messageGenerator div.optional .disabled {
 form.messageGenerator div.optional div {
   display: inline;
   padding-left: 0;
+  padding-right: 5px;
 }
 
 form.messageGenerator div.optional input.form-check-input {
   float: none;
-  margin-top: 0;
-  margin-left: -2.25em;
-  vertical-align: baseline;
+  margin-top: -0.3rem;
+  margin-left: 0;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
 }
 
 form.messageGenerator select
