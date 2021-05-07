@@ -161,10 +161,13 @@
           <label for="messageSuffix">Doplňující info, výstahy, apod.</label>
           <textarea v-model="a.messageSuffix" class="form-control" id="messageSuffix" rows="2" spellcheck="false"></textarea>
         </form>
-        <!--<button id="generateMessage" onclick="a.generateMessage()" type="button" class="btn btn-primary">&#8681; Generovat zprávu &#8681;</button>-->
-        <div class="text-center display-4">&#8681; &#8681; &#8681;</div>
+        <a role="button"
+           v-html="connectedIndicator"
+           v-bind:class="{ 'btn btn-warning pointer': connectedIndicator =='X' }"
+           id="connectedIndicator"
+           href=""></a>
         <form>
-          <textarea class="form-control" id="messageTextarea" rows="10" spellcheck="false">{{ messageString }}</textarea>
+          <textarea v-model="messageString" class="form-control" id="messageTextarea" rows="10" spellcheck="false"></textarea>
         </form>
       </div>
       <button id="ssml" type="button" class="btn btn-primary">SSML</button>

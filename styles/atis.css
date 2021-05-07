@@ -3,6 +3,23 @@ img#logo {
   margin-right: 10px;
 }
 
+a#connectedIndicator {
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  display: block;
+  width: 8rem;
+  height: 2.5rem;
+  margin: 0 auto;
+  padding: 0;
+  cursor: default;
+}
+
+a#connectedIndicator.pointer {
+  cursor: pointer;
+}
+
 ul#mainMenu button {
   width: 100%;
   text-align: left;
@@ -19,6 +36,12 @@ div#mainContainer {
 
 form.messageGenerator {
   line-height: 2.5;
+}
+
+form.messageGenerator select
+ {
+  display: inline;
+  width: auto;
 }
 
 form.messageGenerator div.form-group {
@@ -54,10 +77,4 @@ form.messageGenerator div.optional input.form-check-input {
   width: 20px;
   height: 20px;
   vertical-align: middle;
-}
-
-form.messageGenerator select
- {
-  display: inline;
-  width: auto;
 }
