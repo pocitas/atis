@@ -20,6 +20,11 @@ a#connectedIndicator.pointer {
   cursor: pointer;
 }
 
+button#ssml {
+  margin: 1rem auto;
+  display: block;
+}
+
 ul#mainMenu button {
   width: 100%;
   text-align: left;
