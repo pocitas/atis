@@ -91,7 +91,7 @@ var v = new Vue({
   },
   mounted() {
     // SSML testing button
-    document.querySelector("button#ssml").addEventListener("click", function() { console.log(toSSML()) });
+    document.querySelector("button#ssml").addEventListener("click", function() { requestMP3() });
     document.querySelector("a#connectedIndicator").addEventListener("click", function() { a.customMessageString = "" });
   }
 });
@@ -140,4 +140,18 @@ function toSSML() {
   }));
 
   return "<speak>" + stage[stage.length-1] + "</speak>";
+}
+
+function requestMP3() {
+
+  axios.post('https://271.cz', {
+    superTajneHeslo: '',
+    message: toSSML()
+  })
+  .then((response) => {
+    console.log(response);
+  }, (error) => {
+    console.log(error);
+  });
+
 }
